@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+<!--    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>my_package.log</file>
         <encoder>
-            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <root level="TRACE">
-        <appender-ref ref="CONSOLE"/>
-    </root>
+<!--    <logger name="com.tasks.food.item" level="TRACE">-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </logger>-->
+    <logger name="com.tasks.food.item" level="TRACE">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+<!--    <root level="INFO">-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </root>-->
 </configuration>
