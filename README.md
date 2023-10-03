@@ -1,7 +1,7 @@
 # Training Tasks
 
 #Task 1 :
-Add a Food Item, get all food items, get food item By Id without DB
+Add a Food Item, get all food items, get food item By Id without DB and different logging levels
 
 #Task 2 :
 Add a Food Item, get all food items, get food item By Id with Maria DB
