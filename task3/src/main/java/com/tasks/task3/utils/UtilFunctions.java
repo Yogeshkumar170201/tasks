@@ -12,34 +12,35 @@ public class UtilFunctions {
     @Autowired
     private OrderService orderService;
 
-    @Async
-    public void ordered(Order order){
-        try {
-            orderService.saveOrder(order);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        System.out.println("Order No. "+ order.getId() +" is placed");
-    }
+//    @Async
+//    public void ordered(Order order){
+//        try {
+//            orderService.saveOrder(order);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        System.out.println("Order No. "+ order.getId() +" is placed");
+//    }
+//
+//    @Async
+//    public void prepared(Order order){
+//        try {
+//            Thread.sleep(order.getTimeOfPreparation()*1000);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        System.out.println("Order No. "+ order.getId() +" is prepared");
+//    }
+//
+//    @Async
+//    public void delivered(Order order){
+//        try {
+//            Thread.sleep(order.getTimeOfPreparation()*2000);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        System.out.println("Order No. "+ order.getId() +" is delivered");
+//    }
 
-    @Async
-    public void prepared(Order order){
-        try {
-            Thread.sleep(order.getTimeOfPreparation()*1000);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        System.out.println("Order No. "+ order.getId() +" is prepared");
-    }
-
-    @Async
-    public void delivered(Order order){
-        try {
-            Thread.sleep(order.getTimeOfPreparation()*2000);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        System.out.println("Order No. "+ order.getId() +" is delivered");
-    }
 
 }
