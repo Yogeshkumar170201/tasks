@@ -61,4 +61,37 @@ public class OrderServiceImpl implements OrderService{
     public List<Orders> getAllOrders() {
         return orderDao.findAll();
     }
+
+    /**
+     * @param name
+     * Update Status of Order By Name
+     * @return Updated Order
+     */
+    @Override
+    public Orders updateStatusOfOrderByName(String name) throws InvalidOrderException {
+        Orders order = orderDao.findByName(name);
+        if (order==null){
+            throw new InvalidOrderException("Order not found", HttpStatus.BAD_REQUEST);
+        }
+        order.setStatus("Prepared");
+        orderDao.save(order);
+        return order;
+    }
+
+    /**
+     * @return List of prepared orders
+     */
+    @Override
+    public List<Orders> getPreparedOrders() {
+        return orderDao.getPreparedOrders();
+    }
+
+    /**
+     * @return List of order in preparation
+     */
+    @Override
+    public List<Orders> getInPreparedOrders() {
+        return orderDao.getInPreparedOrders();
+    }
+
 }

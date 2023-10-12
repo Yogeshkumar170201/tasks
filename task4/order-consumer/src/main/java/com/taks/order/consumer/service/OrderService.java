@@ -21,4 +21,22 @@ public interface OrderService {
      * @return all orders
      */
     List<Orders> getAllOrders();
+
+
+    /**
+     * @param name
+     * Update Status of Order By Name
+     * @return Upadted Order
+     */
+    Orders updateStatusOfOrderByName(String name) throws InvalidOrderException;
+
+    /**
+     * @return List of prepared orders
+     */
+    List<Orders> getPreparedOrders();
+
+    /**
+     * @return List of order in preparation
+     */
+    List<Orders> getInPreparedOrders();
 }
