@@ -1,6 +1,5 @@
 package com.tasks.order.producer.dto;
 
-
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
