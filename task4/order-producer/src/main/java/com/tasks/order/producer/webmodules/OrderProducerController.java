@@ -14,7 +14,7 @@ import java.util.*;
  * Order producing controller
  */
 @RestController
-@ControllerAdvice
+@RestControllerAdvice
 public class OrderProducerController {
 
     @Autowired

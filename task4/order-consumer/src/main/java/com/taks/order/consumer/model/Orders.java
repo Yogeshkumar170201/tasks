@@ -7,6 +7,9 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * Model of Order that will be stored in database
+ */
 @Entity
 @Data
 @Table(
@@ -18,11 +21,9 @@ public class Orders {
             strategy = GenerationType.SEQUENCE
     )
     private Long id;
-    @NotNull(message = "Name can't be Null")
-    @NotEmpty(message = "Name can't be empty")
     private String name;
-
     private int timeOfPreparation;
     private String type;
     private Date date;
+    private String status;
 }
